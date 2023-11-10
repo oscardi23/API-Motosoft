@@ -1,0 +1,909 @@
+@charset "UTF-8";
+@use "componentes";
+/*  variables  colores */
+/* estilos cuerpo de la pagina */
+html {
+  min-width: auto;
+  min-height: auto;
+  max-height: fit-content; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+/* Estilos pagina login  barra navegacion */
+nav {
+  background-color: rgba(3, 4, 94, 0.3);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 4rem; }
+
+/* Estilos para el logo */
+.logo img {
+  max-width: 5rem;
+  border-radius: 10px 15px;
+  margin-left: 0px;
+  width: 9rem; }
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px  */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto; }
+
+  .logo img {
+    width: 6rem;
+    /* Reduce el tamaño del logo para dispositivos más pequeños */
+    margin-bottom: 1rem;
+    /* Añade un margen inferior al logo en dispositivos más pequeños */ } }
+/* Estilos pagina  contenedor principal asignada a todas las paginas */
+.container-main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("../img/piloto-motocross-accion-deporte-motocross-deporte-moto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px  */
+@media screen and (max-width: 768px) {
+  .container-main {
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    background-position: center;
+    /* Ajusta la posición de la imagen al centro */
+    padding: 2rem;
+    /* Agrega un espacio de 2rem alrededor del contenido */ } }
+/* estilos contenedor formulario pequeño login */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #CDB8B8;
+  background-color: rgba(3, 4, 94, 0.3);
+  width: 20rem;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-left: 70px; }
+  .container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px; }
+    .container form h6 {
+      text-align: center;
+      color: white; }
+  .container img {
+    height: auto;
+    width: 15rem; }
+  .container .boton-google {
+    background-color: white;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: none; }
+  .container #img-google {
+    width: 3rem; }
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    /* Ajusta el ancho del contenedor al 90% del tamaño de la pantalla */
+    margin-left: 0;
+    /* Elimina el margen izquierdo en dispositivos más pequeños */ }
+
+  .container form {
+    width: 100%;
+    /* Ajusta el ancho del formulario al 100% del contenedor */ }
+
+  .container img {
+    width: 10rem;
+    /* Reduce el tamaño de la imagen del formulario para dispositivos más pequeños */ } }
+/* ESTILOS PAGINA DE QUIENES SOMOS */
+/* CONTENEDOR IMAGEN PRINCIPAL */
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .img-container .img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    cursor: pointer;
+    padding: 5rem;
+    /* Estilo para el contenedor que contiene las imágenes */ }
+    .img-container .img img {
+      width: 35rem;
+      height: auto; }
+
+/* Media queries para dispositivos con un ancho máximo de 768px  */
+@media screen and (max-width: 768px) {
+  .img-container {
+    width: 100%;
+    flex-direction: column; }
+
+  .img {
+    padding: 2rem;
+    /* Reduce el espacio de relleno para dispositivos móviles */
+    width: 100%; }
+
+  #img-moto {
+    width: 100%;
+    height: auto;
+    justify-content: center; } }
+/* estilos pagina politicas quienes somos*/
+/* contenedro mision vision */
+.containerpol {
+  background-color: white;
+  color: #CDB8B8;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  border-radius: 10px 20px;
+  align-self: flex-end;
+  margin: 20px 20px;
+  padding: 2rem; }
+  .containerpol h2 {
+    color: #000; }
+  .containerpol p {
+    color: #0e295f; }
+
+/* Estilo para las imágenes dentro del contenedor */
+.img img {
+  padding: 4px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.1s ease;
+  /* Agregamos una transición para suavizar el efecto */ }
+
+/* Efecto hover para las imágenes */
+.img img:hover {
+  transform: scale(1.2);
+  /* Hacemos que la imagen aumente su tamaño  en el efecto hover */ }
+
+/* contenedor politicas de empresa*/
+.container-politicas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  /* Espacio de relleno para el contenido dentro del contenedor */ }
+
+/* Media queries para dispositivos con un ancho máximo de 768px  */
+@media screen and (max-width: 768px) {
+  .containerpol {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem; }
+
+  .container-politicas {
+    flex-direction: column;
+    /* Cambia la dirección de los elementos a columna para dispositivos móviles */
+    justify-content: center;
+    align-items: center; } }
+.texto {
+  background-color: white;
+  color: #CDB8B8;
+  /* Color de texto principal */
+  width: 100%;
+  /* Ancho del contenedor ocupando todo el ancho disponible */
+  max-width: 50rem;
+  border-radius: 10px 20px;
+  margin: 20px;
+  padding: 2rem;
+  /* Espacio de relleno para el contenido dentro del contenedor */ }
+  .texto h2 {
+    color: #000;
+    /* Color de texto para los elementos h2 dentro de este contenedor */ }
+  .texto h3 {
+    color: #000;
+    /* Color de texto para los elementos h3 dentro de este contenedor */ }
+  .texto p {
+    color: #0e295f;
+    /* Color de texto para los párrafos (elementos p) dentro de este contenedor */ }
+
+/* Media queries para dispositivos con un ancho máximo de 768px (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+  .texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Asegura que el ancho máximo sea el 100% en dispositivos móviles */
+    justify-content: center;
+    align-items: center; } }
+/*contenedor informacion de contacto */
+.container-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  flex-direction: column;
+  background-color: #90caf9;
+  border-radius: 10px;
+  margin-bottom: 10px; }
+  .contacto p {
+    margin: 0;
+    color: #000;
+    font-weight: bold; }
+
+/* Estilos pagina registro  contenedor */
+/* Estilos pagina registro  */
+.container-main-reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  background-image: url("../img/piloto-motocross-accion-deporte-motocross-deporte-moto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .container-main-reg .img-Account {
+    display: flex;
+    background-color: rgba(3, 4, 94, 0.3);
+    border-radius: 5px;
+    height: 60px;
+    width: auto;
+    margin: 5px;
+    align-items: center;
+    justify-content: center; }
+  .container-main-reg h2 {
+    color: beige; }
+  .container-main-reg label {
+    color: white; }
+
+.main-reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 50%; }
+
+.container-reg {
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 4, 94, 0.3);
+  width: 700px;
+  border-radius: 5px; }
+
+/* Media query para hacer responsive el contenedor principal */
+@media screen and (max-width: 768px) {
+  .container-main-reg {
+    background-position: center;
+    /* Cambiar el tamaño de la imagen para que quepa en pantallas más pequeñas */ }
+
+  .img-Account {
+    width: 1rem;
+    /* El 100% de ancho para que se ajuste al tamaño de la pantalla */
+    height: auto;
+    padding: 0;
+    margin: 0; }
+    .img-Account img {
+      width: 10rem; }
+
+  .container-reg {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center; }
+    .container-reg img {
+      width: 6rem;
+      height: auto; }
+    .container-reg form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+/* Kathe el dia 1/08/2023 estaba inspirada*/
+/* estilos pagina pliticas de privacidad */
+.container-pol-main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+
+.container-privacidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
+  border-radius: 1px solid #000;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  margin-top: 2rem; }
+  .container-privacidad h1 {
+    text-align: center; }
+  .container-privacidad h2 {
+    font-size: 1.50rem;
+    font-family: 'Times New Roman', Times, serif; }
+  .container-privacidad #terminos {
+    font-size: 0.90rem;
+    color: #0e295f;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    text-align: center; }
+
+/* estilos responsive */
+@media screen and (max-width: 768px) {
+  .container-privacidad {
+    width: 100%; } }
+/* estilos dentro de motosoft */
+/* estilos pagina registro motocicleta */
+/* container configuracion  barra de navegacion*/
+.container-setup {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.60rem;
+  /* propiedades  contenedor texto */ }
+  .container-setup a {
+    color: white;
+    text-decoration: none;
+    background-color: #1A83FF;
+    width: 4rem;
+    height: 1rem;
+    padding: 1px;
+    text-align: center;
+    font-size: 0.80rem;
+    margin-top: 2px; }
+
+/* estilos contenedor cuenta usuario barra de navegacion*/
+.container-account {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center; }
+  .container-account a {
+    color: black;
+    text-decoration: none; }
+
+/* estilos contenedor principal servicios */
+.container-main-services {
+  position: relative;
+  /* modificado menu*/
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(/background/fondo-papel-tapiz-colorido-borroso-artistico.jpg); }
+
+/* estilos responsive  */
+@media (max-width: 768px) {
+  .container-main-services {
+    background-position: center; } }
+/* Estilos pagina login  barra navegacion */
+.nav-services {
+  background-color: rgba(255, 255, 255, 0.274);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 4rem; }
+
+/* estilos responsive barra de navegacion contenedor */
+@media screen and (max-width: 768px) {
+  .nav-services {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; } }
+.container-reg-serv {
+  flex-direction: column;
+  display: flex;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.384);
+  padding-bottom: 20px;
+  border-radius: 5px; }
+
+@media (max-width: 768px) {
+  .container-reg-serv {
+    width: 100%;
+    /* Cambiar el ancho al 100% */
+    padding: 5px;
+    /* Ajustar el padding */ } }
+/* estilos contenedor menu services */
+/* estilos categorias container menu icono */
+.container-categorias {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  list-style: none;
+  margin: 10px;
+  margin-left: 0%;
+  padding: 0%; }
+  .container-categorias a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 5px; }
+  .container-categorias :hover a {
+    color: #03045e;
+    font-size: 1rem;
+    padding: 0rem;
+    margin: 0%;
+    display: flex;
+    background-color: white;
+    border-radius: 5px; }
+
+/* estilo responsive contenedor categorias */
+@media (max-width: 768px) {
+  .container-categorias {
+    flex-direction: column;
+    /* Cambiar a dirección de columna */
+    justify-content: center;
+    /* Centrar verticalmente */
+    margin: 5px;
+    /* Ajustar el margen */
+    padding: 10px;
+    /* Ajustar el padding */ } }
+/* estilos imagenes icono */
+.icono-menu {
+  border-radius: 5px;
+  margin-left: 0%;
+  border: 1px solid  black; }
+
+/* estilos icocno menu principal*/
+.menu-main {
+  display: flex;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 0px;
+  width: 200px; }
+  .menu-main a {
+    text-decoration: none;
+    font-size: 1.50rem;
+    color: #000; }
+
+:hover.menu-main
+a {
+  color: #03045e;
+  background-color: #f1f3f5c4;
+  border-radius: 5px; }
+
+/* estilos contenedor formularios de dos categorias servicios */
+.container-form-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: auto; }
+
+@media screen and (max-width: 768px) {
+  .container-form-services {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto; } }
+/* estilos contenedor segundo fromulario categorias servicios */
+.container-sec-services {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.384);
+  height: 200px;
+  width: 720px;
+  margin-top: 1px;
+  border-radius: 5px; }
+
+/* estilos contenedor de tabla vehiculos registrados */
+#contenedor-tabla {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding-bottom: 10px; }
+  #contenedor-tabla table {
+    margin-top: 0%;
+    border-collapse: collapse;
+    width: 100%;
+    height: 50%;
+    border-radius: 5px; }
+  #contenedor-tabla th, #contenedor-tabla td {
+    padding: 1px;
+    text-align: center;
+    margin-left: 10px;
+    color: black; }
+  #contenedor-tabla th {
+    color: black;
+    margin: 10px; }
+  #contenedor-tabla input[type="checkbox"] {
+    transform: scale(1.5); }
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  #contenedor-tabla table {
+    height: 100%;
+    /* Ajustar la altura */ }
+
+  #contenedor-tabla th,
+  #contenedor-tabla td {
+    margin-left: 0;
+    /* Ajustar el margen izquierdo */ } }
+/* estilos menu interactivo */
+.menu-services {
+  position: absolute; }
+
+/* estilos responsive contenedor menu */
+@media screen and (max-width: 768px) {
+  .menu-services {
+    display: none; } }
+#menu-items {
+  display: none;
+  top: 100%;
+  right: 0;
+  background-color: #f2f2f252;
+  padding: 10px;
+  border: 1px solid #ccc;
+  list-style: none; }
+
+#menu-items.open {
+  display: block; }
+
+.container-categorias {
+  display: flex;
+  align-items: center; }
+
+.icono-menu {
+  width: 24px;
+  height: 24px; }
+
+.menu-services {
+  margin-left: 0%;
+  margin-right: 200px;
+  background-color: rgba(255, 255, 255, 0.384);
+  height: 4rem;
+  width: auto;
+  margin-top: 0%;
+  margin-bottom: 750px;
+  border-radius: 3px; }
+
+/* Desde aquí los estilos pagina ayuda  katheeeeeeee */
+.container-help {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  margin-left: 200px; }
+  .container-help h3 {
+    font-size: 40px;
+    margin-bottom: 100px; }
+
+/*Estilo de contenedor de imagenes*/
+.con-img-help {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%; }
+
+:hover.img-help {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #1b12c59d;
+  border: 1px solid #631ada; }
+
+/*Estilo de contenedor*/
+.img-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fbfbfdd2;
+  border-radius: 6px;
+  padding: 1rem; }
+  .img-help a {
+    color: black;
+    text-decoration: none;
+    text-align: center; }
+  .img-help :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #2517e7e3; }
+
+/* Estilos de pagina de  asignar cita */
+.container-cita {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 0rem;
+  height: 100%; }
+
+#titulo-cita {
+  color: white; }
+
+.send-cont-cita {
+  background-color: #f2f2f253;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 720px;
+  height: 3rem; }
+  .send-cont-cita input {
+    width: 700px;
+    height: 2rem; }
+
+.disponibilidad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 6rem; }
+
+.date-cita {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+
+#boton-dispon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px; }
+
+/* estilos input de informacion cita asignada*/
+.send-cita {
+  background-color: #f2f2f253;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 3rem;
+  margin-bottom: 10px; }
+  .send-cita input {
+    width: 380px;
+    height: 1rem; }
+
+/* estilos pagina servicio tecnico */
+/* botones */
+/* estilos pagina servicio kathe */
+.container-btn-serv {
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f252;
+  border-radius: 6px;
+  margin-top: 15px;
+  width: 720px;
+  height: 120px; }
+  .container-btn-serv h3 {
+    color: white;
+    text-decoration: underline; }
+
+/* estilos ajustes kathe */
+.titulo-ajustes h3 {
+  color: white;
+  font-size: 32px; }
+
+#titulo-cuenta {
+  color: white; }
+
+#titulo-contraseña {
+  color: white; }
+
+/* katheeeeeeeeeeeeeeeee*/
+/* variables */
+/*  Boton Primario */
+.btn-main, .btn-main-s {
+  background-color: #0075FF;
+  height: 2rem;
+  padding: 0.90rem 1.5rem;
+  border-radius: 0.25rem;
+  color: aliceblue;
+  border: solid 1px #0075FF; }
+  .btn-main:hover, .btn-main-s:hover {
+    background-color: white;
+    color: #0075FF; }
+  .btn-main-s {
+    font-size: 1rem;
+    padding: 0.10rem 1rem; }
+
+/* Estilos para el botón primario en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .btn-main, .btn-main-s {
+    height: 2rem;
+    padding: 0.90rem 1.5rem;
+    border-radius: 0.25rem;
+    /* Mantén los estilos base del botón */
+    font-size: 0.8rem;
+    /* Reduzca el tamaño del texto para dispositivos más pequeños */ } }
+/* Estilos para la variante del botón "btn-main-s" en dispositivos grandes */
+.btn-main-s {
+  /* Hereda estilos del botón principal */
+  font-size: 1rem;
+  padding: 0.10rem 1rem;
+  /* Aplica modificaciones para el botón pequeño */ }
+
+/* Estilos para la variante del botón "btn-main-s" en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .btn-main-s {
+    font-size: 1rem;
+    padding: 0.10rem 1rem;
+    /* Aplica modificaciones para el botón pequeño */
+    font-size: 0.8rem;
+    /* Reduzca el tamaño del texto para dispositivos más pequeños */ } }
+/* Boton secundario */
+.btn-sec, .btn-sec-s {
+  height: 2rem;
+  padding: 0.90rem 1.5rem;
+  border-radius: 0.25rem;
+  color: wheat;
+  background-color: transparent;
+  border: none; }
+  .btn-sec:hover, .btn-sec-s:hover {
+    color: #888; }
+  .btn-sec-s {
+    font-size: 1rem;
+    padding: 0.10rem 1rem; }
+
+/* Estilos para la variante del segundo botón "btn-sec-s" en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .btn-sec-s {
+    font-size: 1rem;
+    padding: 0.10rem 1rem;
+    /* Aplica modificaciones para el botón pequeño */
+    font-size: 0.8rem;
+    /* Reduzca el tamaño del texto para dispositivos más pequeños */ } }
+/* menu barra navegacion */
+.main-menu {
+  margin-bottom: 0; }
+  .main-menu li {
+    font-size: 1rem;
+    list-style: none;
+    display: inline; }
+    .main-menu li a {
+      color: black;
+      text-decoration: none; }
+      .main-menu li a:hover {
+        text-decoration: underline; }
+
+.input-form {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 13rem;
+  height: 2rem;
+  font-size: 16px;
+  color: #265;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* Agregamos transición para bordes y sombras */
+  /* Estilos del placeholder */
+  /* Definimos la animación "pulse" */ }
+  .input-form::placeholder {
+    color: #999; }
+  .input-form:focus {
+    border-color: #0075FF;
+    outline: none;
+    box-shadow: 0 0 5px #4CAF50;
+    animation: pulse 0.5s;
+    /* Agrega una animación "pulse" de 0.5 segundos */ }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (puedes ajustar este valor según tus necesidades) */
+@media screen and (max-width: 768px) {
+  .input-form {
+    width: 100%;
+    /* Ajusta el ancho del campo de entrada al 100% del contenedor */
+    font-size: 14px;
+    /* Reduzca el tamaño de la fuente para dispositivos más pequeños */ } }
+/* estilos boton password */
+.btn-password {
+  display: flex;
+  flex-direction: row;
+  width: 15rem; }
+  .btn-password button {
+    margin: 1rem; }
+  .btn-password a {
+    margin: 1rem; }
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (puedes ajustar este valor según tus necesidades) */
+@media screen and (max-width: 768px) {
+  .btn-password {
+    flex-direction: column;
+    /* Cambia la dirección del contenido a vertical */
+    width: 100%;
+    /* Ajusta el ancho del contenedor al 100% del tamaño de la pantalla */ }
+
+  .btn-password input {
+    margin: 0.5rem 0;
+    /* Ajusta los márgenes del input para dispositivos más pequeños */ } }
+/* clase estilos formulario de varios items */
+.fila-registro {
+  display: flex;
+  flex-direction: row;
+  /* input de formulario registro*/ }
+  .fila-registro .input-form-reg {
+    display: flex;
+    flex-direction: column;
+    margin: 0.50rem; }
+  .fila-registro input {
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    height: 25px; }
+    .fila-registro input:focus {
+      border-color: #0075FF;
+      outline: none;
+      box-shadow: 0 0 5px #4CAF50;
+      animation: pulse 0.5s; }
+
+/* Media query para hacer responsive los elementos del formulario */
+@media screen and (max-width: 768px) {
+  .fila-registro {
+    flex-direction: column;
+    /* Cambiar a una disposición en columna en pantallas más pequeñas */ }
+
+  .input-form-reg {
+    margin: 0.25rem;
+    /* Reducir el margen para ajustar los elementos en pantallas más pequeñas */ }
+
+  input {
+    width: 100%;
+    /* El 100% de ancho para que se ajuste al tamaño de la pantalla */
+    max-width: 250px;
+    /* Establecer un máximo de ancho para evitar que los inputs se extiendan demasiado */ } }
+/* estilos de paginas dentro de motosoft */
+.input-form-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0.50rem;
+  margin-bottom: 5px; }
+
+select {
+  margin: 0%;
+  border-radius: 6px;
+  border: none;
+  width: 174px;
+  height: 28px; }
+  select:focus {
+    border-color: #0075FF;
+    outline: none;
+    box-shadow: 0 0 5px #4CAF50;
+    animation: pulse 0.5s; }
+
+/*# sourceMappingURL=style.css.map */

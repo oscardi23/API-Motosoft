@@ -1,0 +1,358 @@
+
+/* variables */
+$color-main: #0075FF;
+$color-sec: #03045e;
+$color-pag: beige;
+$color-sec1: #1A83FF;
+$opacidad: 0;
+$color-pag-con-opacidad: rgba(red($color-sec), green($color-sec), blue($color-sec), $opacidad);
+$color-sec: #1A83FF;
+$border-radius: 5px;
+
+
+
+
+/*  Boton Primario */
+@mixin btn-base {
+    height: 2rem;
+    padding: 0.90rem 1.5rem;
+    border-radius: 0.25rem;
+}
+
+@mixin btn-sm-modify {
+
+    font-size: 1rem;
+        padding: 0.10rem 1rem;
+
+}
+
+.btn-main {
+
+    background-color: $color-main;
+    @include btn-base();
+    color: aliceblue;
+    border: solid 1px $color-main;
+    
+
+    &:hover{
+        background-color: white;
+        color: $color-main;
+     
+        
+    }
+
+    &-s {
+        @extend .btn-main;
+        @include btn-sm-modify();
+    }
+
+}
+
+/* Estilos para el botón primario en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .btn-main {
+        @include btn-base(); /* Mantén los estilos base del botón */
+        font-size: 0.8rem; /* Reduzca el tamaño del texto para dispositivos más pequeños */
+    }
+}
+
+/* Estilos para la variante del botón "btn-main-s" en dispositivos grandes */
+.btn-main-s {
+    @extend .btn-main; /* Hereda estilos del botón principal */
+    @include btn-sm-modify(); /* Aplica modificaciones para el botón pequeño */
+}
+
+/* Estilos para la variante del botón "btn-main-s" en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .btn-main-s {
+        @include btn-sm-modify(); /* Aplica modificaciones para el botón pequeño */
+        font-size: 0.8rem; /* Reduzca el tamaño del texto para dispositivos más pequeños */
+    }
+}
+
+
+/* Boton secundario */
+
+.btn-sec {
+    @include btn-base();
+    color: wheat;
+    background-color: transparent;
+    border: none; 
+
+    &:hover {
+        color: #888;
+
+    }
+
+    &-s {
+        @extend .btn-sec;
+        @include btn-sm-modify();
+    }
+
+}
+
+/* Estilos para la variante del segundo botón "btn-sec-s" en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .btn-sec-s {
+        @include btn-sm-modify(); /* Aplica modificaciones para el botón pequeño */
+        font-size: 0.8rem; /* Reduzca el tamaño del texto para dispositivos más pequeños */
+    }
+}
+
+
+/* menu barra navegacion */
+.main-menu {
+    margin-bottom: 0;
+    li{
+        font-size: 1rem;
+        list-style: none;
+        display: inline;
+    
+    a {
+        color: black;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        }
+       
+    }
+
+}
+
+// .icon-sm {
+//     font-size: 0.75rem;
+//     color: $color-main;
+//     padding: 0.1rem 0.25rem;
+//     border-radius: 50%;
+//     box-shadow: 0 0 10px #00000055;
+//     i {
+//         color: $color-main;
+//     }
+// }
+
+// .feature {
+//     display: flex;
+//     flex-direction: column;
+
+//     .icon {
+//         color: $color-main;
+//         font-size: 10rem;
+//         text-align: center;
+
+//     }
+//     .description {
+//         .title {
+//             font-size: 2rem;
+//             text-align: center;
+
+
+//         }
+
+//         .text {
+//             color: #888;
+//             font-weight: 600;
+//             text-align: center;
+//         }
+
+//         .cta {
+//         margin-top: 3rem;
+//         color: $color-main;
+//         font-weight: 600;
+//         text-align: center;
+//         }
+//     }
+
+// }
+
+// .icon-desc {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     .icon {
+//         padding: 0%;
+//         color: $color-main;
+//         font-size: 10rem;
+//         text-align: center;
+        
+
+//     }
+//     .title{
+//         margin-top: -2rem;
+//         font-size: 1.5rem;
+//         font-weight: 600;
+//         text-align: center;
+
+//     }
+// }
+
+// Estilos del input
+.input-form {
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    width: 13rem;
+    height: 2rem;
+     
+    font-size: 16px;
+    color: #265;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Agregamos transición para bordes y sombras */
+
+    /* Estilos del placeholder */
+    &::placeholder {
+        color: #999;
+    }
+
+    &:focus {
+        border-color: $color-main;
+        outline: none;
+        box-shadow: 0 0 5px #4CAF50;
+        animation: pulse 0.5s; /* Agrega una animación "pulse" de 0.5 segundos */
+    }
+
+
+/* Definimos la animación "pulse" */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+}
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (puedes ajustar este valor según tus necesidades) */
+@media screen and (max-width: 768px) {
+    .input-form {
+        width: 100%; /* Ajusta el ancho del campo de entrada al 100% del contenedor */
+        font-size: 14px; /* Reduzca el tamaño de la fuente para dispositivos más pequeños */
+    }
+}
+
+
+ /* estilos boton password */
+.btn-password   {
+    display: flex;
+    flex-direction: row;
+    width: 15rem;
+    
+    
+    button {
+        margin: 1rem;
+        
+    }
+
+
+    a {
+        margin: 1rem;
+    }
+}
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (puedes ajustar este valor según tus necesidades) */
+@media screen and (max-width: 768px) {
+    .btn-password {
+        flex-direction: column; /* Cambia la dirección del contenido a vertical */
+        width: 100%; /* Ajusta el ancho del contenedor al 100% del tamaño de la pantalla */
+    }
+
+    .btn-password input {
+        margin: 0.5rem 0; /* Ajusta los márgenes del input para dispositivos más pequeños */
+    }
+}
+
+/* clase estilos formulario de varios items */
+.fila-registro  {
+    display: flex;
+    flex-direction: row;
+
+/* input de formulario registro*/
+.input-form-reg {
+    display: flex;
+    flex-direction: column;
+    margin: 0.50rem;
+}
+
+    input {
+        border-radius: 5px;
+        border: none;
+        width: 170px;
+        height: 25px;
+
+
+        &:focus {
+
+        
+            border-color: $color-main;
+            outline: none;
+            box-shadow: 0 0 5px #4CAF50;
+            animation: pulse 0.5s;
+        }
+
+
+    }
+
+
+
+}
+
+/* Media query para hacer responsive los elementos del formulario */
+@media screen and (max-width: 768px) {
+    .fila-registro {
+        flex-direction: column; /* Cambiar a una disposición en columna en pantallas más pequeñas */
+    }
+
+    .input-form-reg {
+        margin: 0.25rem; /* Reducir el margen para ajustar los elementos en pantallas más pequeñas */
+    }
+
+    input {
+        width: 100%; /* El 100% de ancho para que se ajuste al tamaño de la pantalla */
+        max-width: 250px; /* Establecer un máximo de ancho para evitar que los inputs se extiendan demasiado */
+    }
+}
+
+
+
+
+/* estilos de paginas dentro de motosoft */
+
+
+
+.input-form-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0.50rem;
+    
+    margin-bottom: 5px;
+}
+
+    select {
+        margin: 0%;
+        border-radius: 6px;
+        border: none;
+        width: 174px;
+        height: 28px;
+        
+
+
+        &:focus {
+
+        
+            border-color: $color-main;
+            outline: none;
+            box-shadow: 0 0 5px #4CAF50;
+            animation: pulse 0.5s;
+        }
+
+
+    }
+
+
+

@@ -1,0 +1,337 @@
+@charset "UTF-8";
+.btn-main, .btn-main-s {
+  background-color: #0075FF;
+  height: 2rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.25rem;
+  color: aliceblue;
+  border: solid 1px #0075FF;
+}
+.btn-main:hover, .btn-main-s:hover {
+  background-color: white;
+  color: #0075FF;
+}
+.btn-main-s {
+  font-size: 1rem;
+  padding: 0.1rem 1rem;
+}
+
+.btn-sec, .btn-sec-s {
+  height: 2rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.25rem;
+  color: wheat;
+  background-color: transparent;
+  border: none;
+}
+.btn-sec:hover, .btn-sec-s:hover {
+  color: #888;
+}
+.btn-sec-s {
+  font-size: 1rem;
+  padding: 0.1rem 1rem;
+}
+
+.main-menu {
+  margin-bottom: 0;
+}
+.main-menu li {
+  font-size: 1rem;
+  list-style: none;
+  display: inline;
+}
+.main-menu li a {
+  color: black;
+  text-decoration: none;
+}
+.main-menu li a:hover {
+  text-decoration: underline;
+}
+
+.icon-sm {
+  font-size: 0.75rem;
+  color: #0075FF;
+  padding: 0.1rem 0.25rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3333333333);
+}
+.icon-sm i {
+  color: #0075FF;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+}
+.feature .icon {
+  color: #0075FF;
+  font-size: 10rem;
+  text-align: center;
+}
+.feature .description .title {
+  font-size: 2rem;
+  text-align: center;
+}
+.feature .description .text {
+  color: #888;
+  font-weight: 600;
+  text-align: center;
+}
+.feature .description .cta {
+  margin-top: 3rem;
+  color: #0075FF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.icon-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon-desc .icon {
+  padding: 0%;
+  color: #0075FF;
+  font-size: 10rem;
+  text-align: center;
+}
+.icon-desc .title {
+  margin-top: -2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.input-form {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #265;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Agregamos transición para bordes y sombras */
+  /* Estilos del placeholder */
+  /* Definimos la animación "pulse" */
+}
+.input-form::-moz-placeholder {
+  color: #999;
+}
+.input-form::placeholder {
+  color: #999;
+}
+.input-form:focus {
+  border-color: #0075FF;
+  outline: none;
+  box-shadow: 0 0 5px #4CAF50;
+  animation: pulse 0.5s; /* Agrega una animación "pulse" de 0.5 segundos */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-password {
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+}
+.btn-password input {
+  margin: 1rem;
+}
+
+/* clase estilos formulario de varios items */
+.fila-registro {
+  display: flex;
+  flex-direction: row;
+}
+.fila-registro .input-form-reg {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem;
+}
+.fila-registro input {
+  border-radius: 5px;
+  border: solid 1px;
+}
+.fila-registro:focus {
+  border-color: #0075FF;
+  outline: none;
+  box-shadow: 0 0 5px #4CAF50;
+  animation: pulse 0.5s;
+}
+
+html {
+  min-width: auto;
+  min-height: auto;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+body {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: rgba(205, 184, 184, 0.7);
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 4rem;
+}
+
+.logo img {
+  max-width: 5rem;
+  border-radius: 10px 15px;
+  margin-left: 0px;
+  width: 9rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgba(205, 184, 184, 0.7);
+  width: 20rem;
+  height: -moz-min-content;
+  height: min-content;
+  border-radius: 10px;
+  grid-auto-flow: 1rem;
+  margin-top: 250px;
+  padding: 1rem;
+}
+.container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.container img {
+  height: auto;
+  width: 10rem;
+}
+.container #img-google {
+  width: 3rem;
+  border-radius: 10px;
+}
+
+.menu a {
+  color: aliceblue;
+}
+
+.containerpol {
+  background-color: rgba(205, 184, 184, 0.7);
+  color: #CDB8B8;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  border-radius: 10px 20px;
+  align-self: flex-end;
+  margin: 20px 20px;
+  padding: 2rem;
+}
+.containerpol h2 {
+  color: #000;
+}
+.containerpol p {
+  color: #0e295f;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilo para el contenedor que contiene las imágenes */
+.img {
+  background-color: #0e295f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 5rem;
+}
+
+/* Media queries para dispositivos con un ancho máximo de 768px (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+  .img {
+    flex-direction: column;
+    padding: 2rem; /* Reduce el espacio de relleno para dispositivos móviles */
+  }
+}
+/* Estilo para las imágenes dentro del contenedor */
+.img img {
+  padding: 4px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.1s ease; /* Agregamos una transición para suavizar el efecto */
+}
+
+/* Efecto hover para las imágenes */
+.img img:hover {
+  transform: scale(1.7); /* Hacemos que la imagen aumente su tamaño  en el efecto hover */
+}
+
+.container-politicas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 2rem; /* Espacio de relleno para el contenido dentro del contenedor */
+}
+
+/* Media queries para dispositivos con un ancho máximo de 768px  */
+@media screen and (max-width: 768px) {
+  .container-politicas {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna para dispositivos móviles */
+  }
+}
+.texto {
+  background-color: rgba(205, 184, 184, 0.7);
+  color: #CDB8B8; /* Color de texto principal */
+  width: 100%; /* Ancho del contenedor ocupando todo el ancho disponible */
+  max-width: 50rem;
+  border-radius: 10px 20px;
+  margin: 20px;
+  padding: 2rem; /* Espacio de relleno para el contenido dentro del contenedor */
+}
+.texto h2 {
+  color: #000; /* Color de texto para los elementos h2 dentro de este contenedor */
+}
+.texto h3 {
+  color: #000; /* Color de texto para los elementos h3 dentro de este contenedor */
+}
+.texto p {
+  color: #0e295f; /* Color de texto para los párrafos (elementos p) dentro de este contenedor */
+}
+
+/* Media queries para dispositivos con un ancho máximo de 768px (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+  .texto {
+    max-width: 100%; /* Asegura que el ancho máximo sea el 100% en dispositivos móviles */
+    border-radius: 10px; /* Reduce el radio del borde para que sea más suave en dispositivos móviles */
+    margin: 10px; /* Ajusta el margen a un valor más pequeño en dispositivos móviles */
+    padding: 1rem; /* Reduce el espacio de relleno para dispositivos móviles */
+  }
+}/*# sourceMappingURL=globals.css.map */

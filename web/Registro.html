@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function validarContraseñas() {
+            var contraseña1 = document.getElementById("password").value;
+            var contraseña2 = document.getElementById("conf-password").value;
+
+            if (contraseña1 !== contraseña2) {
+                alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+                return false; // Evita que el formulario se envíe
+            }
+            return true; // Permite que el formulario se envíe si las contraseñas coinciden
+        }
+        
+        function mostrarContraseñas() {
+            var contraseña1 = document.getElementById("password");
+            var contraseña2 = document.getElementById("conf-password");
+
+            if (contraseña1.type === "password") {
+                contraseña1.type = "text";
+                contraseña2.type = "text";
+            } else {
+                contraseña1.type = "password";
+                contraseña2.type = "password";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">
+            <a href="#"></a>
+            <img src="img/logomotonet.jpg" alt="img.png">
+        </div>
+        <div class="menu">
+            <ul class="main-menu menu">
+                <li><a style="color: white; font-size: 20px; margin-right:1rem;  " href="politicas..html">Politicas de Privacidad</a></li>
+                <li><a style="color: white; font-size: 20px   " href="quienes_somos.html">Quienes Somos</a></li>
+               
+               
+            </ul>
+        </div>
+        <div class="get-started">
+            <a href="PasswordRescue.html" class="btn-main-s" style="text-decoration: none;">Restablecer Contraseña</a>
+            <a href="index.html   " class="btn-main-s" style="text-decoration: none;">Inicio</a>
+
+        </div>
+
+    </nav>
+
+    <div class="container-main-reg">
+
+        <div class="img-Account">
+        <img src="img/logomotosoft.png" alt="logo.png">
+        </div>       
+        <div class="container-reg">
+            <div class="main-reg">
+                <img id="img-google" src="img/user11.png" alt="Gmail.png" style="white-space: 100px; height: 100px;">
+                
+            </div>
+            <h2>Registro Usuario </h2>
+            <form onsubmit="return validarContraseñas();" action="Registro" method="post">
+                <!-- Primera fila -->
+          <div class="fila-registro">
+                <div class="input-form-reg">
+                    <label class="form-label" for="usuario"> Tipo Usuario:</label>
+                    <input type="text" id="usuario" name="tUsuario" required>
+                </div>
+                 <div class="input-form-reg">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                 </div>
+                <div class="input-form-reg">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+             </div>
+
+                <!-- Segunda fila -->
+         <div class="fila-registro">
+                <div class="input-form-reg">
+                    <label for="cedula">Numero Cedula:</label>
+                    <input type="text" id="cedula" name="nCedula" maxlength="10" pattern="[0-9]{1,10}" required >
+
+                </div>
+                <div class="input-form-reg">
+                    <label for="date-years">Fecha Nacimiento:</label>
+                 <input type="date" id="date-years" name="fechaNacimiento" required min="1920-01-01" max="2099-12-31">
+
+
+                </div>
+                <div class="input-form-reg">
+                    <label for="email">Correo Electronico:</label>
+                 <input type="email" id="email" name="correo" required>
+                </div>
+            </div>
+             <!-- Tercera fila -->
+         <div class="fila-registro">
+                <div class="input-form-reg">
+                    <label for="telefono">Numero Telefono:</label>
+                    <input  type="tel" id="telefono" name="telefono" pattern="[0-9+-]+" required>
+                </div>
+                <div class="input-form-reg">
+                    <label for="name_user">Nombre Usuario:</label>
+                    <input type="text" id="name_user" name="nUsuario" pattern="[A-Za-z0-9_]+" required>
+                </div>   
+         </div>
+             <!-- Cuarta Fila-->
+         <div class="fila-registro">
+                <div class="input-form-reg">
+                    <label for="password">Contraseña:</label>
+                    <input  type="password" id="password" name="contraseña2" required minlength="8">
+                </div>
+                <div class="input-form-reg">
+                    <label for="conf-password">Confirmar Contraseña:</label>
+                    <input type="password" id="conf-password" name="contraseña" required minlength="8">
+                </div>
+             
+         </div>
+             
+             <div style="display: flex; justify-content: center; align-content: center; width:auto;height: 2rem;margin-top: 10px">
+                <button class="btn-main-s" type="button" onclick="mostrarContraseñas()">Mirar Contraseña</button>
+                <button class="btn-main-s" type="submit" style="margin-top:0px; margin-left: 10px;">Registrarse</button>
+            </div>   
+        </form>
+      </div> 
+    </div>
+  
+</body>
+
+</html>
