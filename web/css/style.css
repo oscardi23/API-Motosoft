@@ -24,7 +24,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 4rem; }
+  height: 6rem; }
 
 /* Estilos para el logo */
 .logo img {
@@ -258,7 +258,7 @@ nav {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  width: auto;
+  width: 100%;
   background-image: url("../img/piloto-motocross-accion-deporte-motocross-deporte-moto.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
@@ -396,7 +396,7 @@ nav {
   /* modificado menu*/
   align-items: center;
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url(../background/fondo2.jpg); }
 
@@ -429,7 +429,8 @@ nav {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.384);
   padding-bottom: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 20px; }
 
 @media (max-width: 768px) {
   .container-reg-serv {
@@ -834,7 +835,7 @@ a {
 /*  Boton Primario */
 .btn-main, .btn-main-s {
   background-color: #0075FF;
-  height: 2rem;
+  height: auto;
   padding: 0.90rem 1.5rem;
   border-radius: 0.25rem;
   color: aliceblue;
@@ -844,12 +845,23 @@ a {
     color: #0075FF; }
   .btn-main-s {
     font-size: 1rem;
-    padding: 0.10rem 1rem; }
+    padding: 0.10rem 1rem;
+    text-decoration: none; }
+
+.btn-main-x {
+  background-color: #0075FF;
+  height: auto;
+  border-radius: 0.25rem;
+  color: aliceblue;
+  border: solid 1px #0075FF; }
+  .btn-main-x:hover {
+    background-color: white;
+    color: #0075FF; }
 
 /* Estilos para el botón primario en dispositivos pequeños */
 @media screen and (max-width: 768px) {
   .btn-main, .btn-main-s {
-    height: 2rem;
+    height: auto;
     padding: 0.90rem 1.5rem;
     border-radius: 0.25rem;
     /* Mantén los estilos base del botón */
@@ -860,6 +872,7 @@ a {
   /* Hereda estilos del botón principal */
   font-size: 1rem;
   padding: 0.10rem 1rem;
+  text-decoration: none;
   /* Aplica modificaciones para el botón pequeño */ }
 
 /* Estilos para la variante del botón "btn-main-s" en dispositivos pequeños */
@@ -867,12 +880,28 @@ a {
   .btn-main-s {
     font-size: 1rem;
     padding: 0.10rem 1rem;
+    text-decoration: none;
     /* Aplica modificaciones para el botón pequeño */
     font-size: 0.8rem;
     /* Reduzca el tamaño del texto para dispositivos más pequeños */ } }
+.btn-submit {
+  display: flex;
+  flex-direction: row;
+  background-color: #0075FF;
+  width: auto;
+  padding: 1rem;
+  height: 1rem;
+  margin: 0px;
+  border-radius: 0.25rem;
+  color: white;
+  border: solid 1px #0075FF; }
+  .btn-submit:hover {
+    background-color: white;
+    color: #0075FF; }
+
 /* Boton secundario */
 .btn-sec, .btn-sec-s {
-  height: 2rem;
+  height: auto;
   padding: 0.90rem 1.5rem;
   border-radius: 0.25rem;
   color: wheat;
@@ -882,13 +911,15 @@ a {
     color: #888; }
   .btn-sec-s {
     font-size: 1rem;
-    padding: 0.10rem 1rem; }
+    padding: 0.10rem 1rem;
+    text-decoration: none; }
 
 /* Estilos para la variante del segundo botón "btn-sec-s" en dispositivos pequeños */
 @media screen and (max-width: 768px) {
   .btn-sec-s {
     font-size: 1rem;
     padding: 0.10rem 1rem;
+    text-decoration: none;
     /* Aplica modificaciones para el botón pequeño */
     font-size: 0.8rem;
     /* Reduzca el tamaño del texto para dispositivos más pequeños */ } }

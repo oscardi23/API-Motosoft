@@ -18,13 +18,9 @@
             <a class="btn-main" href="ajustes.html">Ajustes</a>
             <img class="setup"    src="icon/ajustes.png" alt="img.png">
         </div>
-        <div class="menu">
-            <ul class="main-menu menu">
-                <li><a href="">Cerrar Sesion</a></li>   
-            </ul>
-        </div>
+        
         <div class="container-account">
-            <a class="" href="#">Kathe Ruiz</a>
+           <a class="" href="#"><%= session.getAttribute("nombreDeUsuario")%></a>
             <img   src="icon/user.png" alt="img.png">
         </div>
         
@@ -43,7 +39,7 @@
             <ul id="menu-items">
                 <div class="container-categorias">
                     <img class="icono-menu" src="icon/home.png" alt="icono">
-                    <li><a href="Bienvenida.html">Inicio</a></li>
+                    <li><a href="bien.html">Inicio</a></li>
                 </div>
                 <div class="container-categorias">
                     <img class="icono-menu" src="icon/motorcycle.png" alt="icono">
@@ -95,7 +91,7 @@
 
                 </div>
                 <div class="input-form-list">
-                    <label for="linea">Linea:</label>
+                    <label for="linea" >Linea:</label>
                     <select  id="linea" name="linea" required >
                         <option value="">Seleccione una opción</option>
                         <option value="opcion1">Eco Deluxe</option>

@@ -45,7 +45,8 @@ nav {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 4rem;
+    height:  6rem; 
+    
 }
 
 /* Estilos para el logo */
@@ -378,7 +379,7 @@ nav {
     align-items: center;
     flex-direction: column;
     height: 100%;
-    width: auto;
+    width: 100%;
     background-image: url("../img/piloto-motocross-accion-deporte-motocross-deporte-moto.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -584,7 +585,7 @@ nav {
     position: relative; /* modificado menu*/
     align-items: center;
     flex-direction: row;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-image: url(../background/fondo2.jpg)
    
@@ -641,6 +642,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.384);
     padding-bottom: 20px;
     border-radius: 5px;
+    margin-bottom: 20px
 }
 
 @media (max-width: 768px) {
@@ -1286,7 +1288,7 @@ $border-radius: 5px;
 
 /*  Boton Primario */
 @mixin btn-base {
-    height: 2rem;
+    height: auto;
     padding: 0.90rem 1.5rem;
     border-radius: 0.25rem;
 }
@@ -1295,6 +1297,7 @@ $border-radius: 5px;
 
     font-size: 1rem;
         padding: 0.10rem 1rem;
+        text-decoration: none
 
 }
 
@@ -1320,6 +1323,28 @@ $border-radius: 5px;
 
 }
 
+.btn-main-x{
+
+    background-color: $color-main;
+    height: auto;
+    //padding: 0.90rem 1.5rem;
+    border-radius: 0.25rem;
+    color: aliceblue;
+    border: solid 1px $color-main;
+    
+
+    &:hover{
+        background-color: white;
+        color: $color-main;
+     
+        
+    }
+
+   
+
+}
+
+
 /* Estilos para el botón primario en dispositivos pequeños */
 @media screen and (max-width: 768px) {
     .btn-main {
@@ -1340,6 +1365,37 @@ $border-radius: 5px;
         @include btn-sm-modify(); /* Aplica modificaciones para el botón pequeño */
         font-size: 0.8rem; /* Reduzca el tamaño del texto para dispositivos más pequeños */
     }
+}
+
+
+// boton tipo submit
+
+.btn-submit {
+    display: flex;
+   // align-items: center;
+    //justify-content: center;
+    flex-direction: row;
+    background-color: $color-main;
+    width: auto;
+    padding:1rem;
+    height: 1rem;
+    margin: 0px;
+    
+    border-radius: 0.25rem;
+    color: white;
+    border: solid 1px $color-main;
+    
+
+    &:hover{
+        background-color: white;
+        color: $color-main;
+     
+        
+    }
+
+   
+    
+    
 }
 
 

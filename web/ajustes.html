@@ -23,10 +23,11 @@
                 <li><a href="">Cerrar Sesion</a></li>   
             </ul>
         </div>
-        <div class="container-account">
-            <a class="" href="#">Kathe Ruiz</a>
-            <img   src="icon/user.png" alt="img.png">
+      <div class="container-account">
+            <a class="" href="#"><%= session.getAttribute("nombreDeUsuario")%></a>
+            <img id="user-image" src="icon/user.png" alt="img.png">
         </div>
+
         
     </nav>
 
@@ -43,7 +44,7 @@
             <ul id="menu-items">
                 <div class="container-categorias">
                     <img class="icono-menu" src="icon/home.png" alt="icono">
-                    <li><a href="Bienvenida.html">Inicio</a></li>
+                    <li><a href="bien.html">Inicio</a></li>
                 </div>
                 <div class="container-categorias">
                     <img class="icono-menu" src="icon/motorcycle.png" alt="icono">
@@ -84,6 +85,11 @@
             </div>
             <!--contenedor formulario registro-->
         <div class="container-reg-serv">
+             <div class="container-account">
+            <a class="" href="#"><%= session.getAttribute("nombreDeUsuario")%></a>
+            <img id="user-image" src="icon/user.png" alt="img.png">
+        </div>
+
                
                 <h2 id="titulo-cuenta">Cuenta</h2>
              <form>

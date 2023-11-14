@@ -2,11 +2,23 @@
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
         <servlet-name>RecibirDatos</servlet-name>
-        <servlet-class>config.RecibirDatos</servlet-class>
+        <servlet-class>ServletUsuarios.RecibirDatos</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Registro</servlet-name>
-        <servlet-class>config.Registro</servlet-class>
+        <servlet-class>ServletUsuarios.Registro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CerrarSesionServlet</servlet-name>
+        <servlet-class>ServletUsuarios.CerrarSesionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>controlador</servlet-name>
+        <servlet-class>ServletUsuarios.controlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroMotocicleta</servlet-name>
+        <servlet-class>ServletServicios.RegistroMotocicleta</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RecibirDatos</servlet-name>
@@ -15,5 +27,17 @@
     <servlet-mapping>
         <servlet-name>Registro</servlet-name>
         <url-pattern>/Registro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CerrarSesionServlet</servlet-name>
+        <url-pattern>/CerrarSesionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlador</servlet-name>
+        <url-pattern>/controlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroMotocicleta</servlet-name>
+        <url-pattern>/RegistroMotocicleta</url-pattern>
     </servlet-mapping>
 </web-app>
