@@ -3,20 +3,11 @@ package conexion;
 
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.Properties;
-import java.util.UUID;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 
 
 public class conexionbd {
@@ -28,6 +19,17 @@ public class conexionbd {
      //    String usuario = "yurlady@gmail.com";
     //String contrasena = "ruiz";
     //boolean credencialesValidas = app.validarUsuario(usuario, contrasena);
+   
+    String nombreUsuario = "oscar fabian"; // Reemplaza con un nombre de usuario válido
+    String correoUsuario = app.obtenerCorreoUsuario(nombreUsuario);
+
+    if (correoUsuario != null) {
+        System.out.println("Correo del usuario este: " + correoUsuario);
+    } else {
+        System.out.println("Usuario no encontrado o correo no disponible.");
+    }
+
+    
     
     String usuario = "osgredo23@gmail.com"; // Reemplaza con el usuario ingresado en el formulario
        String contraseña = "oscardiaz"; // Reemplaza con la contraseña ingresada en el formulario
@@ -78,6 +80,23 @@ public class conexionbd {
             e.printStackTrace();
         }
     }
+    
+    public Connection getSQLConexion() {
+    return SQLConexion;
+}
+
+    
+    public void desconectar() {
+        try {
+            if (SQLConexion != null) {
+                SQLConexion.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     
     
    // Método para validar un usuario y contraseña
@@ -136,15 +155,50 @@ public boolean registrarUsuario(String tipoUsuario, String nombres, String apell
 }
 
 
-public void desconectar() {
-        try {
-            if (SQLConexion != null) {
-                SQLConexion.close();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+public String obtenerNombreDeUsuario(String usuarioNombre) {
+    String nombreDeUsuario = null;
+    String query = "SELECT nombres FROM usuarios WHERE correo = ?";
+
+    try {
+        PreparedStatement preparedStatement = SQLConexion.prepareStatement(query);
+        preparedStatement.setString(1, usuarioNombre);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()) {
+            nombreDeUsuario = resultSet.getString("nombres");
         }
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+
+    return nombreDeUsuario;
+}
+
+
+public String obtenerCorreoUsuario(String correoUsuario) {
+    String CorreoUsuario = null;
+    String query = "SELECT correo FROM usuarios WHERE correo = ?";
+
+    try {
+        PreparedStatement preparedStatement = SQLConexion.prepareStatement(query);
+        preparedStatement.setString(1, correoUsuario);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()) {
+            CorreoUsuario = resultSet.getString("correo");
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    
+    // Agrega declaraciones para imprimir información útil
+    System.out.println("Consulta SQL: " + query);
+    System.out.println("Correo obtenido: " + CorreoUsuario);
+
+    return CorreoUsuario;
+}
+
 
 
 
